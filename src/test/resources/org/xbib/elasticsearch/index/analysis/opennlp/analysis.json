@@ -1,0 +1,28 @@
+{
+  "index":{
+    "analysis":{
+      "filter":{
+        "opennlp":{
+          "type":"opennlp",
+          "posTaggerModel": "build/en-test-pos-maxent.bin",
+          "chunkerModel": "build/en-test-chunker.bin",
+          "nerTaggerModels": "build/en-test-ner-person.bin"
+        },
+        "strippayloads" : {
+          "type" : "strippayloads"
+        },
+        "filterpayloads" : {
+          "type" : "filterpayloads",
+          "payloads" : [ "NN" ]
+        }
+      },
+      "tokenizer" : {
+        "opennlp" : {
+          "type":"opennlp",
+          "sentenceModel" : "build/en-test-sent.bin",
+          "tokenizerModel" : "build/en-test-tokenizer.bin"
+        }
+      }
+    }
+  }
+}

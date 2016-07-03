@@ -1,0 +1,26 @@
+{
+  "index":{
+    "analysis":{
+      "filter":{
+        "opennlp":{
+          "type":"opennlp",
+          "posTaggerModel": "build/en-test-pos-maxent.bin"
+        },
+        "strippayloads" : {
+          "type" : "strippayloads"
+        },
+        "filterpayloads" : {
+          "type" : "filterpayloads",
+          "payloads" : [ "NN" ]
+        }
+      },
+      "tokenizer" : {
+        "opennlp" : {
+          "type":"opennlp",
+          "sentenceModel" : "build/en-test-sent.bin",
+          "tokenizerModel" : "build/en-test-tokenizer.bin"
+        }
+      }
+    }
+  }
+}

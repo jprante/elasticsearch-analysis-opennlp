@@ -1,0 +1,6 @@
+# Sample machine learning properties file
+
+Algorithm=PERCEPTRON
+Iterations=200
+Cutoff=5
+Threads=2
